@@ -6,8 +6,8 @@ dependencies:
   browser: '>=0.9.0 <1.0.0'
   js: any
   nuxeo_automation: #'0.0.1+1'
-    #git: https://github.com/nelsonsilva/nuxeo-dart-automation.git
-    path: ../../../../nuxeo-dart-automation
+    git: https://github.com/nelsonsilva/nuxeo-dart-automation.git
+    #path: ../../../../nuxeo-dart-automation
   polymer: '>=0.9.0 <1.0.0'
   route: '>=0.4.6 <1.0.0'
 dev_dependencies:
