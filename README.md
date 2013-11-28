@@ -1,4 +1,5 @@
 # nuxeo-dart-slideshow-sample
+[![Build Status](https://drone.io/github.com/nelsonsilva/nuxeo-dart-slideshow-sample/status.png)](https://drone.io/github.com/nelsonsilva/nuxeo-dart-slideshow-sample/latest)
 
 This is a port of the original [nuxeo-slideshow-sample](https://github.com/dmetzler/nuxeo-slideshow-sample) to Dart.
 
@@ -7,6 +8,18 @@ It's a very simple application that makes use of Nuxeo and Dart to show pictures
 UI is a tag based search UI : you type a tag, click the search button... that's it !
 
 This sample make use of the BusinessObject adapter exposed thru Nuxeo Rest API.
+
+## Try it
+
+In order to install it, you have to :
+
+ * Download and Run a recent Nuxeo distribution (>= 5.8)
+
+ * Download the prebuilt bundle [nuxeo-dart-slideshow-sample-1.0-SNAPSHOT.jar](https://drone.io/github.com/nelsonsilva/nuxeo-dart-slideshow-sample/files/target/nuxeo-dart-slideshow-sample-1.0-SNAPSHOT.jar) to the `$NUXEO_HOME/nxserver/bundles` folder
+ 
+ * Launch Nuxeo
+ 
+ * The application should be available at [http://localhost:8080/nuxeo/slideshow/]()
 
 ## How to build
 
