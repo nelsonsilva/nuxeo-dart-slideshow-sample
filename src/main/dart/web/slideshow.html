@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="import" href="infinite_scroll.html">
+</head>
+<body>
+  <polymer-element name="slideshow-app">
+    <template>
+      <h1 class="ui dividing header">
+        Searching for pictures ?
+      </h1>
+
+      <form class="ui form">
+        <div class="field">
+          <div class="ui icon input">
+            <input id="search" value="{{tag}}" type="text" placeholder="Enter a tag here">
+            <i class="inverted search icon"></i>
+          </div>
+        </div>
+        <button on-click="{{doSearch}}" class="ui blue submit button">Search</button>
+      </form>      
+
+      <h2 class="ui dividing header">Searching for tag {{tag}}</h2>
+
+      <div class="ui two items" is="infinite-scroll" on-scrolling="{{nextPage}}" enabled="{{!search.busy}}" distance="{{1}}">
+        <!-- nth-child CSS selectors take the template tag into account so we just add a dummy child here to make it work -->  
+        <div style="display:none"></div>  
+        <template repeat="{{item in search.items}}">
+          <div class="item">
+            <div class="sides">
+              <div class="active side">
+                <div class="image">
+                  <img src="{{item.mediumURL}}" width="100%">          
+                </div>
+                <div class="content">
+                  <div class="name">{{item.title}}</div>
+                  <p class="description">{{item.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+        
+      </div>
+
+    </template>
+    <script type="application/dart" src="slideshow.dart"></script>  
+  </polymer-element>
+</body>
+</html>
